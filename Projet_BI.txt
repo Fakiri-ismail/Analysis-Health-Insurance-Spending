@@ -1,0 +1,6 @@
+L’objectif de cette application est la mise en place d’un outil de reporting décisionnel afin d’analyser les remboursements mensuels effectués par le régime général de l'Assurance Maladie.
+Une base de données contient l'ensemble des remboursements mensuels effectués par le régime général de l'Assurance est proposée. Les dépenses sont indiquées en montants remboursés et présentées au remboursement.
+L’application doit être composée de deux volets :
+ Un volet opérationnel : CRUD
+ Un volet décisionnel : qui permet de faire une analyse selon plusieurs critères +une couverture spatiale
+https://www.data.gouv.fr/fr/datasets/depenses-d-assurance-maladie-horsprestations-hospitalieres-par-caisse-primaire-departement/

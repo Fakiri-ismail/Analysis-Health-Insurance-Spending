@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "C:\\Users\\Utilisateur\\.virtualenvs\\AssuranceMaladie-_P-FYO45\\Scripts\\python.exe",
+    "python.linting.pylintArgs": ["--load-plugins", "pylint_django"]
+}

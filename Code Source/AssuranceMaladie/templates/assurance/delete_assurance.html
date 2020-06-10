@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block contenu %}
+<div class="row mt-2">
+    <div class="col-md-6 m-auto">
+        <div class="card card-body">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="alert alert-danger" role="alert">
+                    Etes-vous sur de supprimer cette assurance : {{ assu }}
+                </div> 
+                <button type="submit" class="btn btn-danger">Oui</button>
+                <a href="{% url 'details' assu.id %}" class="btn btn-info">No</a>
+            </form>
+
+        </div>
+    </div>
+</div>   
+
+{% endblock %}

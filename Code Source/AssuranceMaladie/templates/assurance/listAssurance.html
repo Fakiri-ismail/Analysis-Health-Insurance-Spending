@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block contenu %}
+<div class="mt-2 mb-2">
+    <a href="{% url 'new_assurance' %}" class="btn btn-info">Ajouter un Assurance</a>
+</div>
+<div class="row">
+<table class="table">
+    <thead class='table-primary'>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">VILLE</th>
+        <th scope="col">NATURE ASSURANCE</th>
+        <th scope="col">QUALITE BENIFICIARE</th>
+        <th scope="col">MONTANT REMBOURSE ($$)</th>
+        <th scope="col">++++</th>
+      </tr>
+    </thead>
+    {% if listes %}
+    <tbody>
+    {% for id,liste in listes.items %}
+      <tr class="table-light">
+        <th scope="row">{{forloop.counter}}</th>
+        {% for l in liste %}
+        <td>{{l}}</td>
+        {% endfor %}
+        <td><a href="{% url 'details' id %}">Plus Détails</a></td>
+      </tr>
+    {% endfor %}  
+    </tbody>
+    {% else %}
+        <h3>Liste est vide</h3>
+    {% endif %}
+  </table>
+</div>
+{% endblock %}

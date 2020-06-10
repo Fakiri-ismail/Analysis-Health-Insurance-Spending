@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block contenu %}
+<div class="mt-2">
+    <a href="{% url 'new_assurance' %}" class="btn btn-info">Ajouter un Assurance</a>
+</div>
+<div class="row">
+    <div class="col-md-6 m-auto">
+        <h4>Mantant Remboursé {{assu.monRem}}$ le {{assu.dateRemb}}</h4>
+        <div class="card card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    Nature d'assuranse  :  {{assu.natureAssurance}}
+                </li>
+                <li class="list-group-item">
+                    Specielité Exercée  :  {{assu.specialiteExecute}}
+                </li>
+                <li class="list-group-item">
+                    Manière d'Exercer  :  {{assu.manierExecuter}}
+                </li>
+                <li class="list-group-item">
+                    Prestation  :  {{assu.prestation}}
+                </li>
+                <li class="list-group-item">
+                    Qualité Bénificiaire  :  {{assu.qualiteBenificiaire}}
+                </li>
+                <li class="list-group-item">
+                    Ville  :  {{assu.ville}}
+                </li>
+                <li class="list-group-item">
+                    Taux de Remboursement  :  {{assu.tauxRemb}}%
+                </li>
+                <li class="list-group-item">
+                    Base de Remboursement  :  {{assu.baseRemb}} $
+                </li>
+                <li class="list-group-item">
+                    Date de Remboursement  :  {{assu.dateRemb}}
+                </li>
+            </ul>
+            <div class="mt-2">
+                <a href="{% url 'edit_assurance' assu.id %}" class="btn btn-info">Modifier</a>
+                <a href="{% url 'delete_assurance' assu.id %}" class="btn btn-danger">Supprimer</a>
+            </div>
+        </div>
+    </div>  
+</div>
+{% endblock %}
